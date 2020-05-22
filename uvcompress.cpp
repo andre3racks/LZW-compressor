@@ -1,11 +1,3 @@
-/* uvcompress.cpp
-   CSC 485B/CSC 578B/SENG 480B
-
-   Placeholder starter code for UVCompress 
-
-   B. Bird - 05/07/2020
-*/
-
 #include <iostream>
 #include <map>
 #include <math.h>
@@ -13,6 +5,8 @@
 #include <vector>
 #include <bitset>
 #include <algorithm>
+
+// helper function for creating bitstrings from strings in hashtable
 
 std::string string_to_bitstring(std::string str)    {
     std::string bin = "";
@@ -35,7 +29,7 @@ void add_to_table(std::map<std::string, int> &table, int val, std::string key)  
     }
     
 }
-
+// populate table with ascii values
 void populate_table(std::map<std::string, int> &table)   {
 
     for(int i = 0; i < 256; i++)   {
@@ -142,6 +136,7 @@ int main(){
 
     std::string working {""};
 
+//    LZW algorithm
     char c;
     while(std::cin.get(c)){
 
